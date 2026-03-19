@@ -1,0 +1,414 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #111;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background: #e85a2a;
+  padding: 32px;
+}
+
+.hero-image-box {
+  width: 100%;
+  height: 700px;
+  border: 2px solid black;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-title {
+  width: 920px;
+  margin-top: 18px;
+  display: block;
+}
+.gallery-section {
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  padding: 20px 24px;
+}
+
+.gallery-image-box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transform: scale(1.1);
+}
+
+.tracklist-section {
+  width: 100%;
+  min-height: 100vh;
+  background: #e85a2a;
+  padding: 28px 18px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.tracklist {
+  width: 100%;
+}
+
+.track-row {
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  align-items: start;
+
+  font-family: "Creato Display Black", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 74px;
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: #000;
+
+  margin-bottom: 2px;
+}
+
+.track-number {
+  display: block;
+}
+
+.track-name {
+  display: block;
+}
+
+
+.track-credit {
+  position: absolute;
+  bottom: 16px;
+  right: 18px;
+font-family: "Creato Display Black", Arial, sans-serif;
+  text-transform: uppercase;
+  color: black;
+  font-weight: bold;
+
+  display: flex;
+  gap: 6px;
+}
+
+/* artista (maior) */
+.track-credit .artist {
+  font-size: 16px;
+}
+
+/* album (menor) */
+.track-credit .album {
+  font-size: 8px;
+}
+
+@font-face {
+  font-family: "Creato Display Black";
+  src: url("fonts/CreatoDisplay-Black.otf") format("opentype");
+}
+
+.merch-section {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  padding: 28px 18px 40px;
+}
+
+.merch-title {
+  width: fit-content;
+  margin: 0 auto 10px;
+  padding: 8px 22px;
+  font-family: "Creato Display Black", Arial, sans-serif;
+  border: 1px solid #e85a2a;
+  color: #e85a2a;
+  font-size: 18px;
+  font-weight: 700;
+
+  
+  text-transform: uppercase;
+}
+
+.merch-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+ 
+  gap: 50px 0px;
+}
+
+.merch-item {
+  text-align: center;
+}
+
+.merch-img {
+  width: 100%;
+  max-width: 200px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.merch-img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  border: 1px solid #e85a2a;
+}
+
+.merch-name {
+  color: #e85a2a;
+  font-size: 15px;
+  font-family: "Creato Display Black", Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 0px;
+}
+
+.merch-price {
+  color: #e85a2a;
+  font-size: 10px;
+  font-family: "Creato Display Black", Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.editorial-section {
+  width: 100%;
+  min-height: 100vh;
+  background: #e85a2a;
+  padding: 12px 14px;
+}
+
+.editorial-image-box {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.editorial-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+.mirror-section {
+  width: 100%;
+  background: #000;
+  padding: 0 0 0px 0;
+}
+
+.mirror-image-box {
+  width: 100%;
+  height: 270px;
+
+  display: flex;
+  justify-content: center; /* centraliza horizontal */
+  align-items: center;     /* centraliza vertical */
+
+  overflow: hidden;
+}
+
+.mirror-img {
+  width: 105%;
+  height: 105%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+.footer {
+  width: 100%;
+  background: #e85a2a;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 24px 16px;
+}
+
+.footer-text {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Creato Display Black", Arial, sans-serif;
+  text-transform: uppercase;
+  color: #000;
+
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  /* base geral */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* 1) HERO */
+  .hero {
+    min-height: auto;
+    padding: 12px;
+  }
+
+  .hero-image-box {
+    height: auto;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  .hero-title {
+    width: 180px;
+    margin-top: 8px;
+  }
+
+  /* 2) GRID PRETO */
+  .gallery-section {
+    height: auto;
+    min-height: auto;
+    padding: 10px 12px;
+  }
+
+  .gallery-image-box {
+    height: auto;
+  }
+
+  .gallery-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transform: none;
+  }
+
+  /* 3) TRACKLIST */
+  .tracklist-section {
+    min-height: auto;
+    padding: 10px 10px 24px;
+    display: block;
+    position: relative;
+  }
+
+  .tracklist {
+    width: 100%;
+  }
+
+  .track-row {
+    grid-template-columns: 22px 1fr;
+    font-size: 13px;
+    line-height: 0.95;
+    margin-bottom: 2px;
+  }
+
+  .track-credit {
+    position: absolute;
+    right: 8px;
+    bottom: 6px;
+    gap: 3px;
+  }
+
+  .track-credit .artist {
+    font-size: 6px;
+  }
+
+  .track-credit .album,
+  .track-credit .divider {
+    font-size: 5px;
+  }
+
+  /* 4) MERCH */
+  .merch-section {
+    min-height: auto;
+    padding: 14px 10px 18px;
+  }
+
+  .merch-title {
+    margin: 0 auto 18px;
+    padding: 5px 14px;
+    font-size: 12px;
+  }
+
+  .merch-grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    row-gap: 16px;
+  }
+
+  .merch-img {
+    max-width: 95px;
+    margin: 0 auto 4px;
+  }
+
+  .merch-name {
+    font-size: 6px;
+    line-height: 1.05;
+    margin-bottom: 1px;
+  }
+
+  .merch-price {
+    font-size: 6px;
+    line-height: 1;
+  }
+
+  /* 5) GRID LARANJA */
+  .editorial-section {
+    min-height: auto;
+    padding: 10px;
+  }
+
+  .editorial-image-box {
+    height: auto;
+  }
+
+  .editorial-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transform: none;
+  }
+
+  /* 6) FAIXA PRETA */
+  .mirror-section {
+    padding: 0;
+  }
+
+  .mirror-image-box {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mirror-img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    transform: none;
+  }
+
+  /* 7) FOOTER */
+  .footer {
+    padding: 12px 10px;
+  }
+
+  .footer-text {
+    font-size: 10px;
+    line-height: 1;
+    text-align: center;
+  }
+}
